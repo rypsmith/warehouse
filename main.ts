@@ -4,18 +4,16 @@ namespace SpriteKind {
     export const Floor = SpriteKind.create()
     export const Gold = SpriteKind.create()
 }
-function setLevel (level: number) {
-    game.splash("Level " + level, "\"B\" to reset level")
-    if (level != 1) {
-        deleteSprites()
-    }
-    if (level == 1) {
+function setLevel(lvl: number) {
+    game.splash("Level " + lvl, "\"B\" to reset level")
+    deleteSprites()
+    if (lvl == 1) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . 3 3 3 . . . . . . . . . . 
             . . . . . . . 3 c 3 . . . . . . . . . . 
-            . . . . . . . 3 1 3 3 3 3 . . . . . . . 
+            . . . . . . . 3 1 3 3 3 3 . . . . 3 . . 
             . . . . . 3 3 3 e 1 e c 3 . . . . . . . 
             . . . . . 3 c 1 e 4 3 3 3 . . . . . . . 
             . . . . . 3 3 3 3 e 3 . . . . . . . . . 
@@ -27,8 +25,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 2) {
+    } else if (lvl == 2) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -46,8 +43,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 3) {
+    } else if (lvl == 3) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -65,8 +61,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 4) {
+    } else if (lvl == 4) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -84,8 +79,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 5) {
+    } else if (lvl == 5) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -103,8 +97,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 6) {
+    } else if (lvl == 6) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -122,8 +115,7 @@ function setLevel (level: number) {
             . . 3 3 3 3 3 3 3 3 3 3 3 3 . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 7) {
+    } else if (lvl == 7) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -141,8 +133,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 8) {
+    } else if (lvl == 8) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -160,8 +151,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 9) {
+    } else if (lvl == 9) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -179,8 +169,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 10) {
+    } else if (lvl == 10) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -198,8 +187,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 11) {
+    } else if (lvl == 11) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -217,8 +205,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 12) {
+    } else if (lvl == 12) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -236,8 +223,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 13) {
+    } else if (lvl == 13) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -255,8 +241,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 14) {
+    } else if (lvl == 14) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
@@ -274,8 +259,7 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
-    }
-    if (level == 15) {
+    } else if (lvl == 15) {
         scene.setTileMap(img`
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . 3 3 3 3 3 . . . . . 
@@ -293,453 +277,274 @@ function setLevel (level: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
+    } else {
+        game.over(true, effects.confetti)
     }
     initSprites()
 }
-function initSprites () {
-    for (let value13 of scene.getTilesByType(1)) {
-        ground = sprites.create(img`
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            `, SpriteKind.Floor)
-        ground.z = 0
-        value13.place(ground)
+function checkWinCondition() {
+    // <--- RESET COUNT TO 0 AT THE START
+    cratesOnGoals = 0
+    goals = sprites.allOfKind(SpriteKind.Goal)
+    for (let goal2 of goals) {
+        gTileX = Math.floor(goal2.x / 8)
+        gTileY = Math.floor(goal2.y / 8)
+        crate2 = getCrateAt(gTileX, gTileY)
+        if (crate2) {
+            cratesOnGoals += 1
+        }
     }
-    for (let value14 of scene.getTilesByType(12)) {
-        target = sprites.create(img`
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . c c . . . 
-            . . c . . c . . 
-            . . c . . c . . 
-            . . . c c . . . 
-            . . . . . . . . 
-            . . . . . . . . 
-            `, SpriteKind.Goal)
-        target.z = 1
-        value14.place(target)
-    }
-    for (let value15 of scene.getTilesByType(14)) {
-        ground = sprites.create(img`
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 
-            `, SpriteKind.Floor)
-        ground.z = 0
-        value15.place(ground)
-        box = sprites.create(img`
-            e e e e e e e e 
-            e e 4 4 4 4 e e 
-            e 4 e 4 4 e 4 e 
-            e 4 4 e e 4 4 e 
-            e 4 4 e e 4 4 e 
-            e 4 e 4 4 e 4 e 
-            e e 4 4 4 4 e e 
-            e e e e e e e e 
-            `, SpriteKind.Crate)
-        box.z = 3
-        value15.place(box)
-    }
-    for (let value22 of scene.getTilesByType(5)) {
-        target = sprites.create(img`
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . c c . . . 
-            . . c . . c . . 
-            . . c . . c . . 
-            . . . c c . . . 
-            . . . . . . . . 
-            . . . . . . . . 
-            `, SpriteKind.Goal)
-        target.z = 1
-        value22.place(target)
-        box = sprites.create(img`
-            4 4 4 4 4 4 4 4 
-            4 4 5 5 5 5 4 4 
-            4 5 4 5 5 4 5 4 
-            4 5 5 4 4 5 5 4 
-            4 5 5 4 4 5 5 4 
-            4 5 4 5 5 4 5 4 
-            4 4 5 5 5 5 4 4 
-            4 4 4 4 4 4 4 4 
-            `, SpriteKind.Crate)
-        box.z = 3
-        value22.place(box)
-    }
-    ground = sprites.create(img`
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 
-        `, SpriteKind.Floor)
-    ground.z = 0
-    scene.placeOnRandomTile(ground, 4)
-    sokoban = sprites.create(img`
-        . . . e e . . . 
-        . . . e e . . . 
-        . 4 4 4 4 4 4 . 
-        4 . 4 4 4 4 . 4 
-        e . 4 4 4 4 . e 
-        . . 8 8 8 8 . . 
-        . . 8 . . 8 . . 
-        . . 8 . . 8 . . 
-        `, SpriteKind.Player)
-    sokoban.z = 2
-    scene.placeOnRandomTile(sokoban, 4)
-    dir = "up"
-}
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    dir = "up"
-    music.playTone(523, music.beat(BeatFraction.Eighth))
-    isPlayerBlocked()
-    if (!(blocked)) {
-        sokoban.y += -4
-        sokoban.y += -4
-    }
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Crate, function (sprite, otherSprite) {
-    if (dir == "right") {
-        otherSprite.x += 4
-        otherSprite.x += 4
-    } else if (dir == "left") {
-        otherSprite.x += -4
-        otherSprite.x += -4
-    } else if (dir == "up") {
-        otherSprite.y += -4
-        otherSprite.y += -4
-    } else if (dir == "down") {
-        otherSprite.y += 4
-        otherSprite.y += 4
-    }
-})
-sprites.onOverlap(SpriteKind.Crate, SpriteKind.Goal, function (sprite, otherSprite) {
-    sprite.setImage(img`
-        4 4 4 4 4 4 4 4 
-        4 4 5 5 5 5 4 4 
-        4 5 4 5 5 4 5 4 
-        4 5 5 4 4 5 5 4 
-        4 5 5 4 4 5 5 4 
-        4 5 4 5 5 4 5 4 
-        4 4 5 5 5 5 4 4 
-        4 4 4 4 4 4 4 4 
-        `)
-})
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    setLevel(level)
-})
-function deleteSprites () {
-    for (let value16 of sprites.allOfKind(SpriteKind.Player)) {
-        value16.destroy()
-    }
-    for (let value17 of sprites.allOfKind(SpriteKind.Gold)) {
-        value17.destroy()
-    }
-    for (let value18 of sprites.allOfKind(SpriteKind.Crate)) {
-        value18.destroy()
-    }
-    for (let value19 of sprites.allOfKind(SpriteKind.Goal)) {
-        value19.destroy()
-    }
-    for (let value20 of sprites.allOfKind(SpriteKind.Floor)) {
-        value20.destroy()
-    }
-    for (let value22 of sprites.allOfKind(SpriteKind.Crate)) {
-        value22.destroy()
-    }
-}
-function initTiles () {
-    scene.setTile(3, img`
-        b 1 b b b b b b b 1 b b b b b b 
-        b 1 b b b b b b b 1 b b b b b b 
-        b 1 b b b b b b b 1 b b b b b b 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        b b b b b 1 b b b b b b b 1 b b 
-        b b b b b 1 b b b b b b b 1 b b 
-        b b b b b 1 b b b b b b b 1 b b 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        b 1 b b b b b b b 1 b b b b b b 
-        b 1 b b b b b b b 1 b b b b b b 
-        b 1 b b b b b b b 1 b b b b b b 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        b b b b b 1 b b b b b b b 1 b b 
-        b b b b b 1 b b b b b b b 1 b b 
-        b b b b b 1 b b b b b b b 1 b b 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, true)
-    scene.setTile(1, img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, false)
-    scene.setTile(4, img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, false)
-    scene.setTile(14, img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, false)
-    scene.setTile(12, img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, false)
-    scene.setTile(5, img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `, false)
-}
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    dir = "left"
-    music.playTone(523, music.beat(BeatFraction.Eighth))
-    isPlayerBlocked()
-    if (!(blocked)) {
-        sokoban.x += -4
-        sokoban.x += -4
-    }
-})
-sprites.onOverlap(SpriteKind.Crate, SpriteKind.Floor, function (sprite, otherSprite) {
-    sprite.setImage(img`
-        e e e e e e e e 
-        e e 4 4 4 4 e e 
-        e 4 e 4 4 e 4 e 
-        e 4 4 e e 4 4 e 
-        e 4 4 e e 4 4 e 
-        e 4 e 4 4 e 4 e 
-        e e 4 4 4 4 e e 
-        e e e e e e e e 
-        `)
-})
-controller.combos.attachCombo("a+d", function () {
-    if (level < 15) {
+    if (goals.length > 0 && cratesOnGoals == goals.length) {
+        music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
         level += 1
         setLevel(level)
     }
-})
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    dir = "right"
-    music.playTone(523, music.beat(BeatFraction.Eighth))
-    isPlayerBlocked()
-    if (!(blocked)) {
-        sokoban.x += 4
-        sokoban.x += 4
+}
+function initSprites() {
+    // Walls (3)
+    for (let tile of scene.getTilesByType(3)) {
+        wall = sprites.create(wallImg, SpriteKind.Floor)
+        wall.z = 2
+        tile.place(wall)
     }
-})
-function isPlayerBlocked () {
-    blocked = false
-    if (dir == "right") {
-        for (let value of sprites.allOfKind(SpriteKind.Crate)) {
-            if (value.y == sokoban.y) {
-                if (value.x == sokoban.x + 8) {
-                    for (let value2 of sprites.allOfKind(SpriteKind.Crate)) {
-                        if (value2.y == sokoban.y) {
-                            if (value2.x == sokoban.x + 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                    for (let value3 of scene.getTilesByType(3)) {
-                        if (value3.y == sokoban.y) {
-                            if (value3.x == sokoban.x + 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    } else if (dir == "left") {
-        for (let value4 of sprites.allOfKind(SpriteKind.Crate)) {
-            if (value4.y == sokoban.y) {
-                if (value4.x == sokoban.x - 8) {
-                    for (let value5 of sprites.allOfKind(SpriteKind.Crate)) {
-                        if (value5.y == sokoban.y) {
-                            if (value5.x == sokoban.x - 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                    for (let value6 of scene.getTilesByType(3)) {
-                        if (value6.y == sokoban.y) {
-                            if (value6.x == sokoban.x - 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    } else if (dir == "up") {
-        for (let value7 of sprites.allOfKind(SpriteKind.Crate)) {
-            if (value7.x == sokoban.x) {
-                if (value7.y == sokoban.y - 8) {
-                    for (let value8 of sprites.allOfKind(SpriteKind.Crate)) {
-                        if (value8.x == sokoban.x) {
-                            if (value8.y == sokoban.y - 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                    for (let value9 of scene.getTilesByType(3)) {
-                        if (value9.x == sokoban.x) {
-                            if (value9.y == sokoban.y - 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    } else if (dir == "down") {
-        for (let value10 of sprites.allOfKind(SpriteKind.Crate)) {
-            if (value10.x == sokoban.x) {
-                if (value10.y == sokoban.y + 8) {
-                    for (let value11 of sprites.allOfKind(SpriteKind.Crate)) {
-                        if (value11.x == sokoban.x) {
-                            if (value11.y == sokoban.y + 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                    for (let value12 of scene.getTilesByType(3)) {
-                        if (value12.x == sokoban.x) {
-                            if (value12.y == sokoban.y + 16) {
-                                blocked = true
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    // Floor
+    for (let tile2 of scene.getTilesByType(1)) {
+        ground = sprites.create(floorImg, SpriteKind.Floor)
+        ground.z = 0
+        tile2.place(ground)
+    }
+    // Goals (12 / 'c')
+    for (let tile3 of scene.getTilesByType(12)) {
+        target = sprites.create(goalImg, SpriteKind.Goal)
+        target.z = 1
+        tile3.place(target)
+    }
+    // Crates (14 / 'e')
+    for (let tile4 of scene.getTilesByType(14)) {
+        // Create white floor underneath the crate first
+        ground = sprites.create(floorImg, SpriteKind.Floor)
+        ground.z = 0
+        tile4.place(ground)
+        box = sprites.create(crateImg, SpriteKind.Crate)
+        box.z = 3
+        tile4.place(box)
+    }
+    // Crates on Goals (Tile 5)
+    for (let tile5 of scene.getTilesByType(5)) {
+        target2 = sprites.create(goalImg, SpriteKind.Goal)
+        target2.z = 1
+        tile5.place(target2)
+        box2 = sprites.create(goldCrateImg, SpriteKind.Crate)
+        box2.z = 3
+        tile5.place(box2)
+    }
+    // Player on Floor (Tile 4)
+    for (let tile6 of scene.getTilesByType(4)) {
+        // Create white floor underneath the player too just in case
+        ground = sprites.create(floorImg, SpriteKind.Floor)
+        ground.z = 0
+        tile6.place(ground)
+        sokoban = sprites.create(playerImg, SpriteKind.Player)
+        sokoban.z = 5
+        tile6.place(sokoban)
+    }
+    // Player on Goal (Tile 8)
+    for (let tile7 of scene.getTilesByType(8)) {
+        target3 = sprites.create(goalImg, SpriteKind.Goal)
+        target3.z = 1
+        tile7.place(target3)
+        sokoban = sprites.create(playerImg, SpriteKind.Player)
+        sokoban.z = 5
+        tile7.place(sokoban)
     }
 }
+// Controls
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    tryMove(0, -1)
+})
+function isWallTile(loc: tiles.Location) {
+    if (!(true) || loc.x < 0 || loc.y < 0) {
+        return true
+    }
+    wallTiles = scene.getTilesByType(3)
+    for (let tile8 of wallTiles) {
+        if (tile8.x == loc.x && tile8.y == loc.y) {
+            return true
+        }
+    }
+    return false
+}
+// Grid Movement System
+function tryMove(dx: number, dy: number) {
+    if (!(sokoban)) {
+        return
+    }
+    playerTileX = Math.floor(sokoban.x / 8)
+    playerTileY = Math.floor(sokoban.y / 8)
+    nextTileX = playerTileX + dx
+    nextTileY = playerTileY + dy
+    nextLocation = tiles.getTileLocation(nextTileX, nextTileY)
+    if (isWallTile(nextLocation)) {
+        return
+    }
+    crateAtNext = getCrateAt(nextTileX, nextTileY)
+    if (crateAtNext) {
+        pushTileX = nextTileX + dx
+        pushTileY = nextTileY + dy
+        pushLocation = tiles.getTileLocation(pushTileX, pushTileY)
+        isWallBehind = isWallTile(pushLocation)
+        isCrateBehind = getCrateAt(pushTileX, pushTileY) != null
+        if (isWallBehind || isCrateBehind) {
+            return
+        }
+        // Push Crate
+        crateAtNext.x = pushTileX * 8 + 4
+        crateAtNext.y = pushTileY * 8 + 4
+        // Update crate appearance if pushed onto goal
+        goalAtPush = getGoalAt(pushTileX, pushTileY)
+        if (goalAtPush) {
+            crateAtNext.setImage(goldCrateImg)
+        } else {
+            crateAtNext.setImage(crateImg)
+        }
+    }
+    // Move Player
+    sokoban.x = nextTileX * 8 + 4
+    sokoban.y = nextTileY * 8 + 4
+    checkWinCondition()
+}
+// B = Reset Level
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    setLevel(level)
+})
+function deleteSprites() {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Player)
+    sprites.destroyAllSpritesOfKind(SpriteKind.Crate)
+    sprites.destroyAllSpritesOfKind(SpriteKind.Goal)
+    sprites.destroyAllSpritesOfKind(SpriteKind.Floor)
+}
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    tryMove(-1, 0)
+})
+function getGoalAt(tileX: number, tileY: number) {
+    for (let goal of sprites.allOfKind(SpriteKind.Goal)) {
+        if (Math.floor(goal.x / 8) == tileX && Math.floor(goal.y / 8) == tileY) {
+            return goal
+        }
+    }
+    return null
+}
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    tryMove(1, 0)
+})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    dir = "down"
-    music.playTone(523, music.beat(BeatFraction.Eighth))
-    isPlayerBlocked()
-    if (!(blocked)) {
-        sokoban.y += 4
-        sokoban.y += 4
-    }
+    tryMove(0, 1)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Gold, function (sprite, otherSprite) {
-    if (dir == "right") {
-        otherSprite.x += 4
-        otherSprite.x += 4
-        if (otherSprite.isHittingTile(CollisionDirection.Right)) {
-            sprite.x = otherSprite.x - 8
-        }
-    } else if (dir == "left") {
-        otherSprite.x += -4
-        otherSprite.x += -4
-        if (otherSprite.isHittingTile(CollisionDirection.Left)) {
-            sprite.x = otherSprite.x + 8
-        }
-    } else if (dir == "up") {
-        otherSprite.y += -4
-        otherSprite.y += -4
-        if (otherSprite.isHittingTile(CollisionDirection.Top)) {
-            sprite.y = otherSprite.y + 8
-        }
-    } else if (dir == "down") {
-        otherSprite.y += 4
-        otherSprite.y += 4
-        if (otherSprite.isHittingTile(CollisionDirection.Bottom)) {
-            sprite.y = otherSprite.y - 8
+function getCrateAt(tileX: number, tileY: number) {
+    for (let crate of sprites.allOfKind(SpriteKind.Crate)) {
+        if (Math.floor(crate.x / 8) == tileX && Math.floor(crate.y / 8) == tileY) {
+            return crate
         }
     }
-})
-let boxesInTargets = 0
-let blocked = false
-let dir = ""
+    return null
+}
+let goalAtPush: Sprite = null
+let isCrateBehind = false
+let isWallBehind = false
+let pushLocation: tiles.Location = null
+let pushTileY = 0
+let pushTileX = 0
+let crateAtNext: Sprite = null
+let nextLocation: tiles.Location = null
+let nextTileY = 0
+let nextTileX = 0
+let playerTileY = 0
+let playerTileX = 0
+let wallTiles: tiles.Tile[] = []
+let target3: Sprite = null
 let sokoban: Sprite = null
+let box2: Sprite = null
+let target2: Sprite = null
 let box: Sprite = null
 let target: Sprite = null
 let ground: Sprite = null
+let wall: Sprite = null
+let crate2: Sprite = null
+let gTileY = 0
+let gTileX = 0
+let goals: Sprite[] = []
+let cratesOnGoals = 0
 let level = 0
+let playerImg: Image = null
+let goldCrateImg: Image = null
+let crateImg: Image = null
+let goalImg: Image = null
+let wallImg: Image = null
+let floorImg: Image = null
+let cratesOnGoals2 = 0
+// Global Variables
+let dir = "up"
+// Custom Art & Sprites
+floorImg = img`
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 
+    `
+wallImg = img`
+    b 1 b b b b b b 
+    b 1 b b b b b b 
+    b 1 b b b b b b 
+    1 1 1 1 1 1 1 1 
+    b b b b b 1 b b 
+    b b b b b 1 b b 
+    b b b b b 1 b b 
+    1 1 1 1 1 1 1 1 
+    `
+goalImg = img`
+    . . . . . . . . 
+    . . d d d d . . 
+    . d 5 5 5 5 d . 
+    . d 5 . . 5 d . 
+    . d 5 . . 5 d . 
+    . d 5 5 5 5 d . 
+    . . d d d d . . 
+    . . . . . . . . 
+    `
+crateImg = img`
+    e e e e e e e e 
+    e e 4 4 4 4 e e 
+    e 4 e 4 4 e 4 e 
+    e 4 4 e e 4 4 e 
+    e 4 4 e e 4 4 e 
+    e 4 e 4 4 e 4 e 
+    e e 4 4 4 4 e e 
+    e e e e e e e e 
+    `
+goldCrateImg = img`
+    5 5 5 5 5 5 5 5 
+    5 5 4 4 4 4 5 5 
+    5 4 5 4 4 5 4 5 
+    5 4 4 5 5 4 4 5 
+    5 4 4 5 5 4 4 5 
+    5 4 5 4 4 5 4 5 
+    5 5 4 4 4 4 5 5 
+    5 5 5 5 5 5 5 5 
+    `
+playerImg = img`
+    . . . e e . . . 
+    . . . e e . . . 
+    . 4 4 4 4 4 4 . 
+    4 . 4 4 4 4 . 4 
+    e . 4 4 4 4 . e 
+    . . 8 8 8 8 . . 
+    . . 8 . . 8 . . 
+    . . 8 . . 8 . . 
+    `
 scene.setBackgroundImage(img`
     bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
     bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -1110,43 +915,6 @@ scene.setBackgroundImage(img`
     cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
     `)
 pause(100)
-game.setDialogCursor(img`
-    e e e e e e e e e e e e e e e e 
-    e e e e e e e e e e e e e e e e 
-    e e e e 4 4 4 4 4 4 4 4 e e e e 
-    e e e e 4 4 4 4 4 4 4 4 e e e e 
-    e e 4 4 e e 4 4 4 4 e e 4 4 e e 
-    e e 4 4 e e 4 4 4 4 e e 4 4 e e 
-    e e 4 4 4 4 e e e e 4 4 4 4 e e 
-    e e 4 4 4 4 e e e e 4 4 4 4 e e 
-    e e 4 4 4 4 e e e e 4 4 4 4 e e 
-    e e 4 4 4 4 e e e e 4 4 4 4 e e 
-    e e 4 4 e e 4 4 4 4 e e 4 4 e e 
-    e e 4 4 e e 4 4 4 4 e e 4 4 e e 
-    e e e e 4 4 4 4 4 4 4 4 e e e e 
-    e e e e 4 4 4 4 4 4 4 4 e e e e 
-    e e e e e e e e e e e e e e e e 
-    e e e e e e e e e e e e e e e e 
-    `)
 level = 1
-initTiles()
+// Start Game
 setLevel(level)
-game.onUpdateInterval(500, function () {
-    boxesInTargets = 0
-    for (let box2 of sprites.allOfKind(SpriteKind.Crate)) {
-        for (let value21 of sprites.allOfKind(SpriteKind.Goal)) {
-            if (box2.x == value21.x && box2.y == value21.y) {
-                boxesInTargets += 1
-            }
-        }
-    }
-    if (boxesInTargets == sprites.allOfKind(SpriteKind.Crate).length) {
-        if (level == 15) {
-            game.over(true)
-        } else {
-            music.playMelody("C - C G C5 C5 - - ", 480)
-            level += 1
-            setLevel(level)
-        }
-    }
-})
