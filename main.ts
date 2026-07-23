@@ -4,7 +4,7 @@ namespace SpriteKind {
     export const Floor = SpriteKind.create()
     export const Gold = SpriteKind.create()
 }
-function setLevel(lvl: number) {
+function setLevel (lvl: number) {
     game.splash("Level " + lvl, "\"B\" to reset level")
     deleteSprites()
     if (lvl == 1) {
@@ -13,7 +13,7 @@ function setLevel(lvl: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . 3 3 3 . . . . . . . . . . 
             . . . . . . . 3 c 3 . . . . . . . . . . 
-            . . . . . . . 3 1 3 3 3 3 . . . . 3 . . 
+            . . . . . . . 3 1 3 3 3 3 . . . . . . . 
             . . . . . 3 3 3 e 1 e c 3 . . . . . . . 
             . . . . . 3 c 1 e 4 3 3 3 . . . . . . . 
             . . . . . 3 3 3 3 e 3 . . . . . . . . . 
@@ -282,7 +282,7 @@ function setLevel(lvl: number) {
     }
     initSprites()
 }
-function checkWinCondition() {
+function checkWinCondition () {
     // <--- RESET COUNT TO 0 AT THE START
     cratesOnGoals = 0
     goals = sprites.allOfKind(SpriteKind.Goal)
@@ -300,7 +300,7 @@ function checkWinCondition() {
         setLevel(level)
     }
 }
-function initSprites() {
+function initSprites () {
     // Walls (3)
     for (let tile of scene.getTilesByType(3)) {
         wall = sprites.create(wallImg, SpriteKind.Floor)
@@ -362,7 +362,7 @@ function initSprites() {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     tryMove(0, -1)
 })
-function isWallTile(loc: tiles.Location) {
+function isWallTile (loc: tiles.Location) {
     if (!(true) || loc.x < 0 || loc.y < 0) {
         return true
     }
@@ -375,7 +375,7 @@ function isWallTile(loc: tiles.Location) {
     return false
 }
 // Grid Movement System
-function tryMove(dx: number, dy: number) {
+function tryMove (dx: number, dy: number) {
     if (!(sokoban)) {
         return
     }
@@ -417,7 +417,7 @@ function tryMove(dx: number, dy: number) {
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     setLevel(level)
 })
-function deleteSprites() {
+function deleteSprites () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Player)
     sprites.destroyAllSpritesOfKind(SpriteKind.Crate)
     sprites.destroyAllSpritesOfKind(SpriteKind.Goal)
@@ -426,7 +426,7 @@ function deleteSprites() {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     tryMove(-1, 0)
 })
-function getGoalAt(tileX: number, tileY: number) {
+function getGoalAt (tileX: number, tileY: number) {
     for (let goal of sprites.allOfKind(SpriteKind.Goal)) {
         if (Math.floor(goal.x / 8) == tileX && Math.floor(goal.y / 8) == tileY) {
             return goal
@@ -440,7 +440,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     tryMove(0, 1)
 })
-function getCrateAt(tileX: number, tileY: number) {
+function getCrateAt (tileX: number, tileY: number) {
     for (let crate of sprites.allOfKind(SpriteKind.Crate)) {
         if (Math.floor(crate.x / 8) == tileX && Math.floor(crate.y / 8) == tileY) {
             return crate
