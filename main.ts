@@ -313,6 +313,8 @@ function setLevel (lvl: number) {
             . . . . . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . . . . . 
             `, TileScale.Eight)
+    } else if (lvl == 18) {
+    	
     } else {
         game.over(true, effects.confetti)
     }
